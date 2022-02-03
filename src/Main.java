@@ -39,7 +39,10 @@ public class Main {
     }
 
     public static void out(Object ...obj) {
-        var obj1 = obj;
+        Object[] objarr = obj;
+        for (Object o: objarr) {
+            System.out.println(o);
+        }
     }
 
     public static void main(String[] args) {
@@ -52,5 +55,6 @@ public class Main {
 
         out("hej", "kurt");
 
+        out(std, "hej", 3.3);
     }
 }
