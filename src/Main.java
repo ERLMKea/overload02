@@ -17,39 +17,16 @@ public class Main {
         System.out.println(ii);
     }
 
+    public static void out(Student std) {
+        String className = std.getClass().getName();
+        String hashCodeHex = Integer.toHexString(std.hashCode());
+        out(className + "@" + hashCodeHex);
+    }
+
     public static void main(String[] args) {
-	    // write your code here
-        //System.out.println("hej");
-        out("hejjj");
-        out(3);
-        Integer i1 = Integer.valueOf(17);
-        //out(i1.hashCode());
-        i1++;
-        //out(i1.hashCode());
-        out(i1);
-        //out()
+        Student std = new Student();
+        out(std);
+        System.out.println(std);
 
-        Integer iii = 1;
-        int n = 1;
-        while (n<0) {
-            try {
-                iii = iii * 1000;
-                int y = iii / 0;
-            } catch (Exception e) {
-                out("fejl e=" + e.getMessage());
-            }
-            out(iii);
-            n++;
-        }
-        for (int i = 26350; i < 26450; i++) {
-            out("" + (char)i + " har ascii=" + i);
-        }
-
-        out("" + (char)65021);
-        String jord = "الرض";
-        //out('ض');
-        out('木');
-        //﷽
-        //out('a');
     }
 }
