@@ -17,16 +17,40 @@ public class Main {
         System.out.println(ii);
     }
 
+    public static void out(Class cls) {
+        System.out.println(cls);
+        System.out.println(cls.getClass());
+        //var obj = cls.getClass();
+        Class class1 = cls.getClass();
+        //System.out.println(obj);
+        //var obj = class1.getClass()
+    }
+
     public static void out(Student std) {
         String className = std.getClass().getName();
         String hashCodeHex = Integer.toHexString(std.hashCode());
         out(className + "@" + hashCodeHex);
     }
 
+    public static void out(String ...str) {
+        var obj = str;
+
+        System.out.println(str);
+    }
+
+    public static void out(Object ...obj) {
+        var obj1 = obj;
+    }
+
     public static void main(String[] args) {
         Student std = new Student();
-        out(std);
+        //out(std);
         System.out.println(std);
+
+        //out(std.getClass());
+        //ystem.out.println("hej", "kurt");
+
+        out("hej", "kurt");
 
     }
 }
