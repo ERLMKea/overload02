@@ -55,6 +55,6 @@ public class Main {
 
         out("hej", "kurt");
 
-        out(std, "hej", 3.3);
+        out(std, "hej", 3.3, std.getClass());
     }
 }
